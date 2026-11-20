@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Control de Motores</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/2_logo_ELECTRONICA.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Bootslander
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Updated: Nov 19 2026 with Bootstrap v5.3.9
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <!-- Directo en la etiqueta HTML -->
+        <h1 class="sitename" style="color: #1bcc8e;">Control de Motores DC</h1>
+
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Inicio</a></li>
+          <li><a href="#about">Opciones</a></li>
+          <li><a href="#features">Componentes</a></li>
+          <li><a href="#seccion-arduino-bs5">Código Fuente de Arduino</a></li>
+          <li><a href="#seccion-python-bs5">Código Fuente de Python</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+      <img src="assets/img/hero-bg-2.jpg" alt="" class="hero-bg">
+
+      <div class="container">
+        <div class="row gy-4 justify-content-center align-items-center">
+
+          <!-- Imagen responsiva y centrada -->
+          <div class="col-10 col-md-8 col-lg-5 order-lg-last hero-img text-center" data-aos="zoom-out"
+            data-aos-delay="100">
+            <img src="assets/img/circuit.png" class="img-fluid animated" alt="Circuito de control de motores">
+          </div>
+
+          <!-- Texto principal -->
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-in">
+            <h1>¿Qué problema resuelve este programa?</h1>
+            <p>Este proyecto ofrece una interfaz gráfica intuitiva en Python conectada a una placa Arduino
+              Uno R3, permitiéndote controlar dos motores independientes en tiempo real con clics y deslizadores.
+            </p>
+            <div class="d-flex">
+              <a href="#about" class="btn-get-started">Iniciar</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9"></use>
+        </g>
+      </svg>
+    </section>
+
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-xl-center gy-5">
+
+          <div class="col-xl-5 content">
+            <h3>Opciones</h3>
+            <h2>¿Qué puedes hacer con este sistema?</h2>
+            <p>Controlar motores de corriente continua (DC) desde una computadora suele requerir escribir comandos
+              manuales en monitores seriales o reprogramar el microcontrolador cada vez que se desea cambiar la
+              velocidad o el sentido de giro.
+            </p>
+            <a href="./Manual de Usuario.pdf" download="Manual_Usuario_Motores.pdf" class="read-more">
+              <span>Descarga el Manual de Usuario</span>
+              <i class="bi bi-download"></i>
+            </a>
+          </div>
+
+          <div class="col-xl-7">
+            <div class="row gy-4 icon-boxes">
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box">
+                  <i class="bi bi-buildings"></i>
+                  <h3>Control independiente</h3>
+                  <p>Manejar el Motor 1 (Izquierdo) y el Motor 2 (Derecho) por separado.
+                  </p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                  <i class="bi bi-clipboard-pulse"></i>
+                  <h3>Cambio de sentido instantáneo</h3>
+                  <p>Hacer girar cada motor hacia adelante, hacia atrás o
+                    detenerlo por completo.</p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                  <i class="bi bi-command"></i>
+                  <h3>Regulación precisa de velocidad</h3>
+                  <p>Ajustar la potencia mediante modulación por ancho de
+                    pulso (PWM) en un rango de 0 a 255.
+                  </p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="icon-box">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <h3>Seguridad inmediata</h3>
+                  <p>Detener ambos motores al instante mediante un botón de Parada de
+                    Emergencia.
+                  </p>
+                </div>
+              </div> <!-- End Icon Box -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <div class="container">
+        <h2>Componentes</h2>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-item">
+              <i class="bi bi-nvme" style="color: #ffbb2c;"></i>
+              <h3><a href="" class="stretched-link">Arduino Uno</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item">
+              <i class="bi bi-infinity" style="color: #5578ff;"></i>
+              <h3><a href="" class="stretched-link">L298N</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="features-item">
+              <i class="bi bi-mortarboard" style="color: #e80368;"></i>
+              <h3><a href="" class="stretched-link">Motores DC</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="features-item">
+              <i class="bi bi-nut" style="color: #e361ff;"></i>
+              <h3><a href="" class="stretched-link">Fuente DC</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="features-item">
+              <i class="bi bi-shuffle" style="color: #47aeff;"></i>
+              <h3><a href="" class="stretched-link">Cables Dupont</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="features-item">
+              <i class="bi-usb-plug" style="color: #ffa76e;"></i>
+              <h3><a href="" class="stretched-link">Cable A-B</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="700">
+            <div class="features-item">
+              <i class="bi bi-x-diamond" style="color: #11dbcf;"></i>
+              <h3><a href="" class="stretched-link">Arduino IDE</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="800">
+            <div class="features-item">
+              <i class="bi bi-camera-video" style="color: #4233ff;"></i>
+              <h3><a href="" class="stretched-link">Python</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="900">
+            <div class="features-item">
+              <i class="bi bi-command" style="color: #b2904f;"></i>
+              <h3><a href="" class="stretched-link">PyCharm</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1000">
+            <div class="features-item">
+              <i class="bi bi-dribbble" style="color: #b20969;"></i>
+              <h3><a href="" class="stretched-link">Pyserial</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1100">
+            <div class="features-item">
+              <i class="bi bi-cast" style="color: #ff5828;"></i>
+              <h3><a href="" class="stretched-link">Tkinter</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+          <div class="col-lg-3 col-md-4" data-aos="fade-up" data-aos-delay="1200">
+            <div class="features-item">
+              <i class="bi bi-brightness-high" style="color: #29cc61;"></i>
+              <h3><a href="" class="stretched-link">Motores</a></h3>
+            </div>
+          </div><!-- End Feature Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Código Fuente de Arduino Section -->
+    <!-- Sección Responsiva Bootstrap 5 con Números de Fila - Código Arduino -->
+    <section class="container-fluid my-4" id="seccion-arduino-bs5">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+      <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
+      <style>
+        .bs5-code-card {
+          background-color: #1e1e1e;
+          border: 1px solid #3c3c3c;
+        }
+
+        .bs5-code-header {
+          background-color: #2d2d2d;
+          border-bottom: 1px solid #3c3c3c;
+        }
+
+        .bs5-code-card pre[class*="language-"] {
+          margin: 0;
+          padding: 1rem 1rem 1rem 3.8rem;
+          font-size: clamp(0.78rem, 1.8vw, 0.92rem);
+          line-height: 1.5;
+          max-height: 70vh;
+          overflow: auto;
+        }
+
+        .bs5-code-card .line-numbers-rows {
+          border-right: 1px solid #3c3c3c;
+          padding-right: 0.4rem;
+        }
+
+        .bs5-code-card .line-numbers-rows>span:before {
+          color: #7a828e;
+        }
+      </style>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-10">
+          <h2>Código Fuente de Arduino</h2>
+          <div class="card bs5-code-card text-light rounded-3 shadow overflow-hidden">
+            <div
+              class="card-header bs5-code-header d-flex flex-wrap justify-content-between align-items-center gap-2 py-2 px-3">
+              <span class="fw-semibold small text-break">Arduino / C++ — Control_Motor.ino (L298N)</span>
+              <button type="button" class="btn btn-sm btn-info text-dark fw-semibold"
+                onclick="copiarCodigoBS5('codigo-arduino-bs5', this)">
+                Copiar
+              </button>
+            </div>
+
+            <pre class="line-numbers"><code id="codigo-arduino-bs5" class="language-cpp">// ========================================================
+// CÓDIGO ARDUINO CLÁSICO - CONTROL DE 2 MOTORES (L298N)
+// ========================================================
+
+// Definicion de pines para motor 1 Izquierdo
+// ENA debe ir a un pin con capacidad PWM (~) para regular velocidad (0 -255)
+const int ENA = 3;
+const int IN1 = 4;
+const int IN2 = 5;
+
+// Definicion de pines para motor 2 Derecho
+// ENB debe ir a un pin con capacidad PWM (~) para regular velocidad (0 -255)
+const int ENB = 9;
+const int IN3 = 7;
+const int IN4 = 8;
+
+void setup() {
+  // Reduce la latencia al seleccionar 115200 baudios
+  Serial.begin(115200);
+
+  pinMode(ENA, OUTPUT);
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+
+  pinMode(ENB, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+
+  // Evita arranques accidentales al energizar o reiniciar la placa
+  detenerTodo();
+}
+
+void loop() {
+  // Verificar si hay datos disponibles en el puerto serial
+  if (Serial.available() > 0) {
+    String comando = Serial.readStringUntil('\n');
+    comando.trim();  // Limpiar espacios o retornos de carro
+    procesarComando(comando);
+  }
+}
+
+void procesarComando(String cmd) {
+  // Comando general de parada de emergencia
+  if (cmd == "STOP") {
+    detenerTodo();
+    return;
+  }
+
+  // Estructura esperada: "Motor:Direccion:Velocidad" (ej. M1:F:200)
+  int primerSep = cmd.indexOf(':');
+  int segundoSep = cmd.lastIndexOf(':');
+
+  if (primerSep != -1 && segundoSep != -1 && primerSep != segundoSep) {
+    String motor = cmd.substring(0, primerSep);
+    String dir = cmd.substring(primerSep + 1, segundoSep);
+    int vel = cmd.substring(segundoSep + 1).toInt();
+
+    // Limitar la velocidad de forma segura entre 0 y 255
+    vel = constrain(vel, 0, 255);
+
+    if (motor == "M1") {
+      controlarMotor(ENA, IN1, IN2, dir, vel);
+    } else if (motor == "M2") {
+      controlarMotor(ENB, IN3, IN4, dir, vel);
+    }
+  }
+}
+
+void controlarMotor(int pinPWM, int pinA, int pinB, String dir, int velocidad) {
+  if (dir == "F") {  // Adelante (Forward)
+    digitalWrite(pinA, HIGH);
+    digitalWrite(pinB, LOW);
+    analogWrite(pinPWM, velocidad);  // PWM clásico de Arduino (0 - 255)
+  } else if (dir == "B") {           // Atrás (Backward)
+    digitalWrite(pinA, LOW);
+    digitalWrite(pinB, HIGH);
+    analogWrite(pinPWM, velocidad);
+  } else {  // Parada (Stop)
+    digitalWrite(pinA, LOW);
+    digitalWrite(pinB, LOW);
+    analogWrite(pinPWM, 0);
+  }
+}
+
+void detenerTodo() {
+  controlarMotor(ENA, IN1, IN2, "S", 0);
+  controlarMotor(ENB, IN3, IN4, "S", 0);
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+      <script>
+        if (typeof window.copiarCodigoBS5 !== "function") {
+          window.copiarCodigoBS5 = function (elementId, btn) {
+            const codeEl = document.getElementById(elementId);
+            if (!codeEl) return;
+            navigator.clipboard.writeText(codeEl.innerText).then(() => {
+              const textoOriginal = btn.textContent;
+              btn.textContent = "¡Copiado!";
+              btn.classList.remove("btn-info", "text-dark");
+              btn.classList.add("btn-success", "text-white");
+              setTimeout(() => {
+                btn.textContent = textoOriginal;
+                btn.classList.remove("btn-success", "text-white");
+                btn.classList.add("btn-info", "text-dark");
+              }, 1800);
+            });
+          };
+        }
+      </script>
+    </section>
+
+    <!-- Código Fuente de Python Section -->
+    <!-- Sección Responsiva Bootstrap 5 con Números de Fila - Código Python -->
+    <section class="container-fluid my-4" id="seccion-python-bs5">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+      <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" />
+
+      <style>
+        .bs5-code-card {
+          background-color: #1e1e1e;
+          border: 1px solid #3c3c3c;
+        }
+
+        .bs5-code-header {
+          background-color: #2d2d2d;
+          border-bottom: 1px solid #3c3c3c;
+        }
+
+        .bs5-code-card pre[class*="language-"] {
+          margin: 0;
+          padding: 1rem 1rem 1rem 3.8rem;
+          font-size: clamp(0.78rem, 1.8vw, 0.92rem);
+          line-height: 1.5;
+          max-height: 70vh;
+          overflow: auto;
+        }
+
+        .bs5-code-card .line-numbers-rows {
+          border-right: 1px solid #3c3c3c;
+          padding-right: 0.4rem;
+        }
+
+        .bs5-code-card .line-numbers-rows>span:before {
+          color: #7a828e;
+        }
+      </style>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-10">
+          <h2>Código Fuente de Python</h2>
+          <div class="card bs5-code-card text-light rounded-3 shadow overflow-hidden">
+            <div
+              class="card-header bs5-code-header d-flex flex-wrap justify-content-between align-items-center gap-2 py-2 px-3">
+              <span class="fw-semibold small text-break">Python — tk18.py (Tkinter + Serial)</span>
+              <button type="button" class="btn btn-sm btn-primary fw-semibold"
+                onclick="copiarCodigoBS5('codigo-python-bs5', this)">
+                Copiar
+              </button>
+            </div>
+
+            <pre class="line-numbers"><code id="codigo-python-bs5" class="language-python">import tkinter as tk
+from tkinter import ttk, messagebox
+import serial
+import serial.tools.list_ports
+
+
+class ControlMotoresTk:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Control de Motores")
+        self.root.geometry("600x500")
+        self.root.config(bg="orange")
+        self.root.resizable(False, False)
+
+        self.ser = None
+        self.estado_m1 = {"dir": "S", "vel": 150}
+        self.estado_m2 = {"dir": "S", "vel": 150}
+
+        self.crear_widgets()
+
+    def obtener_puertos(self):
+        return [p.device for p in serial.tools.list_ports.comports()]
+
+    def toggle_conexion(self):
+        if self.ser and self.ser.is_open:
+            try:
+                self.enviar_comando("STOP")
+                self.ser.close()
+            except:
+                pass
+            self.btn_conectar.config(text="Conectar", bg="#4CAF50")
+            self.lbl_estado.config(text="Desconectado", fg="red")
+            self.combo_puertos.config(state="readonly")
+        else:
+            puerto = self.combo_puertos.get()
+            if not puerto:
+                messagebox.showerror("Error", "Selecciona un puerto COM válido")
+                return
+            try:
+                self.ser = serial.Serial(puerto, 115200, timeout=1)
+                self.btn_conectar.config(text="Desconectar", bg="#f44336")
+                self.lbl_estado.config(text=f"Conectado a {puerto}", fg="green")
+                self.combo_puertos.config(state="disabled")
+            except Exception as ex:
+                messagebox.showerror("Error de Conexión", str(ex))
+
+    def enviar_comando(self, cmd):
+        if self.ser and self.ser.is_open:
+            try:
+                self.ser.write(f"{cmd}\n".encode("utf-8"))
+            except Exception as ex:
+                print(f"Error al enviar: {ex}")
+
+    def actualizar_motor(self, motor, nueva_dir=None, nueva_vel=None):
+        if nueva_dir is not None:
+            if motor == "M1":
+                self.estado_m1["dir"] = nueva_dir
+            else:
+                self.estado_m2["dir"] = nueva_dir
+
+        if nueva_vel is not None:
+            if motor == "M1":
+                self.estado_m1["vel"] = int(nueva_vel)
+            else:
+                self.estado_m2["vel"] = int(nueva_vel)
+
+        d = self.estado_m1["dir"] if motor == "M1" else self.estado_m2["dir"]
+        v = self.estado_m1["vel"] if motor == "M1" else self.estado_m2["vel"]
+        self.enviar_comando(f"{motor}:{d}:{v}")
+
+    def parada_emergencia(self):
+        self.estado_m1["dir"] = "S"
+        self.estado_m2["dir"] = "S"
+        self.enviar_comando("STOP")
+        self.lbl_m1_val.config(text="Estado: DETENIDO")
+        self.lbl_m2_val.config(text="Estado: DETENIDO")
+
+    def crear_widgets(self):
+        # Marco superior de Conexión
+        frame_conn = tk.LabelFrame(self.root, text=" Configuración Serial ", font=("Arial", 10, "bold"), padx=10, pady=10, background="orange")
+        frame_conn.pack(fill="x", padx=15, pady=10)
+
+        tk.Label(frame_conn, text="Puerto:").pack(side="left", padx=5)
+
+        self.combo_puertos = ttk.Combobox(frame_conn, values=self.obtener_puertos(), width=15, state="readonly")
+        self.combo_puertos.pack(side="left", padx=5)
+        if self.combo_puertos['values']:
+            self.combo_puertos.current(0)
+
+        btn_refrescar = tk.Button(frame_conn, text="🔄", command=lambda: self.combo_puertos.config(values=self.obtener_puertos()))
+        btn_refrescar.pack(side="left", padx=5)
+
+        self.btn_conectar = tk.Button(frame_conn, text="Conectar", bg="#4CAF50", fg="white", font=("Arial", 9, "bold"),
+                                      command=self.toggle_conexion)
+        self.btn_conectar.pack(side="left", padx=10)
+
+        self.lbl_estado = tk.Label(frame_conn, text="Desconectado", fg="red", font=("Arial", 9, "bold"))
+        self.lbl_estado.pack(side="right", padx=5)
+
+        # Marco central de Motores
+        frame_motores = tk.Frame(self.root)
+        frame_motores.pack(fill="both", expand=True, padx=15, pady=5)
+
+        # --- Panel Motor 1 ---
+        f_m1 = tk.LabelFrame(frame_motores, text=" Motor 1 (Izquierdo) ", font=("Arial", 10, "bold"), padx=10, pady=10, background="orange")
+        f_m1.pack(side="left", fill="both", expand=True, padx=(0, 5))
+
+        self.lbl_m1_val = tk.Label(f_m1, text="Estado: DETENIDO", fg="#d32f2f", font=("Arial", 9, "bold"))
+        self.lbl_m1_val.pack(pady=2)
+
+        tk.Label(f_m1, text="Velocidad PWM (0-255):").pack(pady=5)
+        slider_m1 = ttk.Scale(f_m1, from_=0, to=255, orient="horizontal",
+                              command=lambda v: self.on_slider_change("M1", v))
+        slider_m1.set(150)
+        slider_m1.pack(fill="x", pady=5)
+
+        tk.Button(f_m1, text="Adelante", bg="#2196F3", fg="white", font=("Arial", 9),
+                  command=lambda: [self.lbl_m1_val.config(text="Estado: ADELANTE", fg="green"),
+                                   self.actualizar_motor("M1", nueva_dir="F")]).pack(fill="x", pady=2)
+        tk.Button(f_m1, text="Parar", bg="red", fg="white", font=("Arial", 9),
+                  command=lambda: [self.lbl_m1_val.config(text="Estado: DETENIDO", fg="#d32f2f"),
+                                   self.actualizar_motor("M1", nueva_dir="S")]).pack(fill="x", pady=2)
+        tk.Button(f_m1, text="Atrás", bg="#9C27B0", fg="white", font=("Arial", 9),
+                  command=lambda: [self.lbl_m1_val.config(text="Estado: ATRÁS", fg="blue"),
+                                   self.actualizar_motor("M1", nueva_dir="B")]).pack(fill="x", pady=2)
+
+        # --- Panel Motor 2 ---
+        f_m2 = tk.LabelFrame(frame_motores, text=" Motor 2 (Derecho) ", font=("Arial", 10, "bold"), padx=10, pady=10, background="orange")
+        f_m2.pack(side="right", fill="both", expand=True, padx=(5, 0))
+
+        self.lbl_m2_val = tk.Label(f_m2, text="Estado: DETENIDO", fg="#d32f2f", font=("Arial", 9, "bold"))
+        self.lbl_m2_val.pack(pady=2)
+
+        tk.Label(f_m2, text="Velocidad PWM (0-255):").pack(pady=5)
+        slider_m2 = ttk.Scale(f_m2, from_=0, to=255, orient="horizontal",
+                              command=lambda v: self.on_slider_change("M2", v))
+        slider_m2.set(150)
+        slider_m2.pack(fill="x", pady=5)
+
+        tk.Button(f_m2, text="Adelante", bg="#2196F3", fg="white", font=("Arial", 9),
+                  command=lambda: [self.lbl_m2_val.config(text="Estado: ADELANTE", fg="green"),
+                                   self.actualizar_motor("M2", nueva_dir="F")]).pack(fill="x", pady=2)
+        tk.Button(f_m2, text="Parar", bg="red", fg="white", font=("Arial", 9),
+                  command=lambda: [self.lbl_m2_val.config(text="Estado: DETENIDO", fg="#d32f2f"),
+                                   self.actualizar_motor("M2", nueva_dir="S")]).pack(fill="x", pady=2)
+        tk.Button(f_m2, text="Atrás", bg="#9C27B0", fg="white", font=("Arial", 9),
+                  command=lambda: [self.lbl_m2_val.config(text="Estado: ATRÁS", fg="blue"),
+                                   self.actualizar_motor("M2", nueva_dir="B")]).pack(fill="x", pady=2)
+
+        # Botón inferior de Parada de Emergencia
+        frame_bottom = tk.Frame(self.root, padx=15, pady=15, background="orange")
+        frame_bottom.pack(fill="x")
+
+        btn_emergency = tk.Button(frame_bottom, text="PARADA DE EMERGENCIA", bg="#D32F2F", fg="white",
+                                  font=("Arial", 11, "bold"), height=2, command=self.parada_emergencia)
+        btn_emergency.pack(fill="x")
+
+    def on_slider_change(self, motor, val):
+        val_int = int(float(val))
+        # Solo envía si el motor se encuentra en movimiento para optimizar el puerto serie
+        current_dir = self.estado_m1["dir"] if motor == "M1" else self.estado_m2["dir"]
+        if current_dir != "S":
+            self.actualizar_motor(motor, nueva_vel=val_int)
+        else:
+            if motor == "M1":
+                self.estado_m1["vel"] = val_int
+            else:
+                self.estado_m2["vel"] = val_int
+
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    app = ControlMotoresTk(root)
+    root.mainloop()</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+      <script>
+        if (typeof window.copiarCodigoBS5 !== "function") {
+          window.copiarCodigoBS5 = function (elementId, btn) {
+            const codeEl = document.getElementById(elementId);
+            if (!codeEl) return;
+            navigator.clipboard.writeText(codeEl.innerText).then(() => {
+              const textoOriginal = btn.textContent;
+              btn.textContent = "¡Copiado!";
+              btn.classList.remove("btn-primary");
+              btn.classList.add("btn-success");
+              setTimeout(() => {
+                btn.textContent = textoOriginal;
+                btn.classList.remove("btn-success");
+                btn.classList.add("btn-primary");
+              }, 1800);
+            });
+          };
+        }
+      </script>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about ">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Control de Motores DC</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Control de Motores DC</strong> <span>All Rights
+          Reserved</span>
+      </p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a
+          href="https://bootstrapmade.com/tools/">DevTools</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
